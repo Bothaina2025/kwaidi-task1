@@ -1,4 +1,4 @@
 <template>
-    <h9>Home view</h9>
+    <h9></h9>
   </template>
   

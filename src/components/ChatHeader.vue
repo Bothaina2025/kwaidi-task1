@@ -14,54 +14,51 @@
 <style scoped>
 .icon-bar {
   position:absolute;
-  top: 18%;
-  left: 60%;
-  transform: translate(-50%, -50%);
   display: flex;
+  top:140px;
+  left:870px;
+  transform: translate(-50%, -50%);
   align-items: center;
   justify-content: space-between;
-  padding: 1.2vw 2vw;
-  background-color:rgba(255, 255, 255, 1);
-  border-radius:8px;
+  padding: 12px 20px;  
+  border-radius: 8px;
   border: 1px solid #e6e6e6;
-  box-shadow: (0px 2px 4px -1px rgba(175, 182, 201, 0.2));
-  width:1,158px;
-  min-width: 1000px;
-  max-width: 400px;
-  height:60px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 4px -1px rgba(175, 182, 201, 0.2);
+  width:1100px; 
+  height: 60px;
 }
 
 .title-chat {
   color: black;
-  font-size: 1.2vw;
-  font-weight: 600;
+  font-size: 15px; 
+  font-weight:500;
   margin: 0;
 }
 
 .chat-controls {
   display: flex;
   align-items: center;
-  gap: 1vw;
+  gap: 10px; 
 }
 
 .icon-bar i {
   cursor: pointer;
-  font-size: 1vw;
+  font-size: 16px; 
   color: #29343D;
 }
 
 .divider {
-  font-size: 1vw;
+  font-size: 16px; 
   color: #888;
 }
 
-
 .chat-button {
-  background-color:#635BFF;
+  background-color:rgba(221, 219, 255, 1);
   border: none;
-  color: rgb(255, 255, 255);
+  color:rgba(99, 91, 255, 1);
   padding: 6px 14px;
-  font-size: 0.85rem;
+  font-size: 14px; 
   font-weight: 500;
   cursor: pointer;
   border-radius: 6px;
@@ -69,7 +66,27 @@
 }
 
 .chat-button:hover {
-  background-color: #635BFF;
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .icon-bar {
+    width: 90%;  
+    max-width: 320px;
+    padding: 10px;
+  }
+
+  .title-chat {
+    font-size: 16px;
+  }
+
+  .icon-bar i, .divider {
+    font-size: 14px;
+  }
+
+  .chat-button {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
 }
 </style>

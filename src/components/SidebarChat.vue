@@ -3,6 +3,7 @@
     <div class="sidebar">
       <div class="user-info">
         <img src="@/image.png/user.png1.png" class="user-avatar" />
+        <span class="status-dot online"></span>
         <div class="user-details">
           <h3 class="username">Mathew Anderson</h3>
           <p class="user-role">Marketing Director</p>
@@ -22,12 +23,13 @@
 
       <ul class="chat-list">
         <li v-for="chat in chats" :key="chat.id">
-          <img :src="chat.avatar" class="avatar" />
+          <div class="avatar-container"></div>
+            <img :src="chat.avatar" class="avatar" />
+            <span class="status-dot-list" :class="chat.status"></span>
           <div class="chat-details">
             <h4>{{ chat.name }} <span class="time">{{ chat.time }}</span></h4>
             <p>{{ chat.lastMessage }}</p>
           </div>
-          <span class="status-dot" :class="chat.status"></span>
         </li>
       </ul>
     </div>
@@ -54,34 +56,44 @@ export default {
 <style scoped>
 .sidebar-container {
   position:absolute;
-  left:18%; 
-  top: 27%; 
-  width: 350px; 
-  height: 100vh; 
-  background: white;
+  left:310px ;
+  top: 198px;
+  width:340px; 
+  height:800px;
+  right: 1px;
+  font-size: 20px;
+  background: rgb(255, 255, 255);
   border-right: 1px solid #ddd;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; 
+  overflow-y:hidden; 
 }
 
 .sidebar {
-  width: 100%; 
-  height: 100%;
-  padding: 20px;
+ width: 309px;
+ height:110px;
+ border-radius: 4px;
+ gap: 8px;
+ padding-top: 18px;
+ padding-right: 12px;
+ padding-bottom: 8px;
+ padding-left: 12px;
+ border-width: 1px;
+
 }
 
 .user-info {
   display: flex;
+  width:301px ;
+  height: 59px;
   align-items: center;
-  gap: 10px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #ddd;
+  gap:20px;
+  padding-bottom: 10px;
+
 }
 
 .user-avatar {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: 50px;
 }
 
 .user-details {
@@ -89,7 +101,7 @@ export default {
 }
 
 .username {
-  font-size: 16px;
+  font-size: 14px;
   font-weight:bold;
   margin: 0;
 }
@@ -109,18 +121,6 @@ export default {
   font-weight: bold;
 }
 
-.online {
-  color: green;
-}
-
-.offline {
-  color: red;
-}
-
-.busy {
-  color: orange;
-}
-
 .options-icon {
   color: gray;
   cursor: pointer;
@@ -128,19 +128,23 @@ export default {
 
 .search-container {
   position: relative;
+  width: 302px;
+  height: 40px;
   margin: 15px 0;
 }
 
 .search {
-  width: 100%;
+  width: 302px;
+  height: 40px;
   padding: 10px 35px;
-  font-size: 14px;
+  font-size: 12px;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
 
 .search-icon {
   position: absolute;
+  size: 10px;
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
@@ -151,20 +155,21 @@ export default {
 .recent-chats {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 12px;
+  font-weight:bold;
   color: gray;
   margin-bottom: 10px;
 }
 
 .chat-list {
   max-height: calc(100vh - 200px); 
-  overflow-y: auto;
+  overflow-y:hidden;
 }
 
 .chat-list li {
   display: flex;
   align-items: center;
+  margin-left:-40px;
   gap: 10px;
   padding: 12px;
   cursor: pointer;
@@ -173,7 +178,7 @@ export default {
 }
 
 .chat-list li:hover {
-  background: #f5f5f5;
+  background: #e2e2e2;
 }
 
 .avatar {
@@ -183,42 +188,56 @@ export default {
 }
 
 .chat-details {
-  flex: 1;
+  flex:1px;
 }
 
 h4 {
-  font-size: 14px;
+  font-size: 12px;
+  left:30px;
   margin: 0;
   display: flex;
   justify-content: space-between;
 }
 
 .time {
-  font-size: 12px;
-  color: gray;
-}
-
-p {
-  font-size: 12px;
-  margin: 0;
+  font-size: 10px;
   color: gray;
 }
 
 .status-dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
+  border: 2px solid white;
+  margin-left:-30px;
+  margin-bottom:-35px; 
+  left:5px; 
+}
+.status-dot-list{
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left:-20px;
+  margin-bottom:-35px; 
+  left:5px; 
+}
+
+p {
+  font-size: 10px;
+  margin: 0;
+  color: gray;
 }
 
 .online {
-  background: green;
+  background:rgba(54, 199, 108, 1);
 }
 
 .offline {
-  background: red;
+  background:rgba(255, 102, 146, 1);
 }
 
 .busy {
-  background: yellow;
+  background: rgba(255, 214, 72, 1);
 }
 </style>

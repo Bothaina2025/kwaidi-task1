@@ -1,16 +1,14 @@
 <template>
     <div class="chat-container">
-      <!-- الشريط الجانبي (قائمة المحادثات) -->
+    
       <SidebarMenu />
   
-      <!-- منطقة المحادثة الرئيسية -->
       <div class="chat-main">
         <ChatHeader />
         <ChatMessages />
         <ChatInput />
       </div>
   
-      <!-- الشريط الجانبي للملفات والوسائط -->
       <AttachmentsSidebar />
     </div>
 </template>

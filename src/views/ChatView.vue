@@ -31,15 +31,8 @@
   .chat-container {
     display: flex;
     height: 100vh;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
   }
-  .chat-main {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    background: white;
-  }
+  
 </style>
   

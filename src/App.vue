@@ -21,7 +21,7 @@ export default {
     HeaderMenu,
     SidebarMenu,
     ChatView
-    
+
   }
   
 };
@@ -31,11 +31,8 @@ export default {
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height:100px;
+  background-color:rgba(244, 247, 251, 1);
 }
 
-.content {
-  flex-grow: 1;
-  padding-bottom: 50px; 
-}
 </style>

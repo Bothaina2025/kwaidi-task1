@@ -31,7 +31,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background: white;
+  background: rgb(255, 255, 255);
+  width: 1,200px;
+  height: 72px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -43,18 +45,19 @@
   display: flex;
   align-items: center;
   color:#29343D;
-  gap: 10px;
+  gap: 15px;
 }
 
 .header-center {
-  display: flex;
+  display:flex;
+  position:absolute;
   align-items: center;
-  margin-left: -600px;
+  margin-left:290px;
   color:#29343D;
   gap: 15px;
   width: 16.67px;
   height: 16.67px;
-  top: 1.67px;
+  top: 28px;
   border: 1.25px;
 }
 
@@ -76,13 +79,6 @@
   margin: 0 10px;
   cursor: pointer;
 }
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 15px; 
-}
-
 
 .language, .profile {
   display: flex;

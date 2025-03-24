@@ -73,8 +73,8 @@ export default {
   
 <style scoped>
 .sidebar {
-  width: 250px; 
-  height: 100vh; 
+  width: 300px; 
+  height:1219px; 
   background: #ffffff;
   display: flex;
   flex-direction: column;

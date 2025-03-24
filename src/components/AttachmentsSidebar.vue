@@ -1,6 +1,6 @@
 <template>
-    <div class="w-1/4 bg-white rounded-lg shadow p-4 fixed-right">
-      <h3 class="text-xl font-semibold mb-6">Media (36)</h3>
+    <div class="chatMedia">
+      <h6 class="text-media">Media<span class="text-36">(36)</span></h6>
       <div class="grid grid-cols-3  gap-1">
         <img
           v-for="img in  media  "
@@ -11,7 +11,7 @@
       </div>
        
      <div class="section">
-       <h3>Files (36)</h3>
+       <h6 class="text-files">Files<span class="text-36">(36)</span></h6>
       <div class="file-list">
         <div class="file-item">
          <img src="@/image.png/pdf-icon.png" alt="PDF file" class="img">
@@ -71,16 +71,42 @@
 </script>
 
 <style scoped>
+.chatMedia{
+  position:absolute;
+  left:1179px ;
+  top:288px;
+  width:240px; 
+  height:710px;
+  padding: 20px;
+  right: 1px;
+  gap:30px;
+  background: rgb(255, 255, 255);
+  border-left: 1px solid #dcdcdc;
+  box-shadow: rgb(216, 216, 216);
+  overflow-y:hidden; 
+}
+.text-36{
+  color:rgba(152, 164, 174, 1);
+  font-size: 14px;
+  font-weight:light;
+}
 
-  .fixed-right {
-  position: absolute; 
+.text-media{
+  font-size:15px;
+}
+
+.text-files{
+  margin-bottom: 20px;
+}
+
+.fixed-right {
   width: 300px;
   height:783px ;
-  top: 77%; 
+  top: 77px; 
   right: -30px; 
   transform: translateY(-50%);
-
 }
+
 .image-file,img{
   width: 35px;
   height: 35px; 
@@ -94,73 +120,91 @@
   gap: 10px;
 }
 
-  .container {
-    width: 250px;
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgb(255, 255, 255);
-    
-  }
-  .section {
-    font-family: Arial, sans-serif;
-    padding:4px;
-    
-  }
-  h3 {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #000;
-  }
-  .media-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 9px;
-  }
+.container {
+  width: 250px;
+  background: white;
+  padding: 10px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+}
+.section {
+  font-family: Arial, sans-serif;
+  padding:6px;
+  overflow: hidden;
   
-    .img {
-     width: 40px;
-     height: 40px;
-     background-color: #f1f1f1;
-     border-radius: 8px;
-     padding: 4px;
-    }
+}
 
-    .name {
-        font-weight:bold;
-        font-size:12px;
-        color: #333;
-        flex-grow:1;
-    }
-    .size-date {
-        color: #999;
-        font-size: 12px;
-    }
-    h3 {
-        color: #000000;
-        font-size: 16px;
-        font-weight: normal;
-    }
+.h3 {
+  font-size: 14px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+  color:rgba(41, 52, 61, 1);
+}
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+  
+.img {
+  width:40px;
+  height:40px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.name {
+  font-weight:lighter;
+  font-size:13px;
+  color: #333;
+  margin-left:-10px;
+  flex-grow:6;
+}
+
+.size-date {
+  color: #999;
+  font-size: 10px;
+  columns:1;
+  margin-bottom:-25px;
+  margin-left:-200px;
+  margin-right:50px;
+}
+
+.h3 {
+  color: rgba(41, 52, 61, 1);
+  width: 164px;
+  height: 20px;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-weight: normal;
+}
+
  .grid img {
   width: 60px; 
   height: 50px;
- }
+}
 
-  .file-list {
-    display: flex;
-    flex-direction: column;
-  }
-  .file-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 7px 1px;
-  }
-  .file-info {
-    font-size: 106px;
-  }
-  .file-name {
-    font-weight:lighter;
-  }
+.file-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 1px;
+}
+.file-info {
+  font-size: 106px;
+}
+.file-name {
+  font-weight:lighter;
+}
 </style>
